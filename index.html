@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>빈칸 생성기</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="./files/kickoff.css">
+		<link rel="stylesheet" href="./files/style.css">
+	</head>
+<body>
+
+	<div id="main" class="entry">
+		<h1 class="text-centre">빈칸 생성기</h1>
+		<div id="clozeTest"></div>
+		<footer>
+			<p>Based on <a href="https://github.com/mrmartineau/cloze-test">Cloze test creator</a> | Edited by 김영민</p>
+		</footer>
+	</div><!--!/#container -->
+
+
+	<script id="template-clozeTest" type="text/ractive">
+		<div class="group">
+			<h3>1. 텍스트를 입력하세요</h3>
+		</div>
+
+		<textarea id="input" class="input" autofocus value="{{input}}"></textarea>
+
+		<div class="group">
+			<div id="result">
+				<h3>2. 빈칸으로 만들 단어를 선택하세요</h3>
+				<div id="result_content">{{{inputRegex}}}</div>
+			</div><!-- /results -->
+
+			<div id="keywords">
+				<h3>3. 단어 목록</h3>
+				<p><small>다시 채우려면 클릭하세요</small></p>
+				<div id="keyword_content"></div>
+				<button id="#random" class="btn">섞기</button>
+			</div><!-- /keywords -->
+		</div>
+	</script>
+
+	<script src="./files/ractive.js"></script>
+	<script src="./files/jquery.min.js"></script>
+	<script src="./files/script.js"></script>
+
+
+</body></html>
