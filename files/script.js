@@ -50,6 +50,7 @@ $(function() {
 			inputWidth = $(this).width()
 		;
 		if ($(this).children().length == 0) {
+			console.log("index: " + $('#result_content').children().index($(this)))
 			incrementNumber();
 
 			$(this).attr({id: 'item' + number})
