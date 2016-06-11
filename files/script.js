@@ -97,7 +97,7 @@ $(function() {
 
 	$('#keywords button').click(function() {
 		//$('#keyword_content').randomize("#keyword_content span");
-		console.log(numbers.sort());
+		console.log(numbers.sort(function(a,b){return a-b;}));
 	});
 
 	$('body').on('keyup', '#result_content input[type=text]', inputCheck);
