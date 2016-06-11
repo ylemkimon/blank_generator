@@ -49,7 +49,7 @@ $(function() {
 			thisTxt = $(this).text(),
 			inputWidth = $(this).width()
 		;
-		if ($(this).children().size() == 0) {
+		if ($(this).children().length == 0) {
 			incrementNumber();
 
 			$(this).attr({id: 'item' + number})
