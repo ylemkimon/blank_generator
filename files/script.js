@@ -1,3 +1,7 @@
+var examples = {
+	'251': 'There is strong research evidence that children perform better in mathematics if music is incorporated in it. It has been shown that mathematics is related with music in various known ways so much that not putting the relationship to good use in and out of school could only be to our disadvantage. Researchers at a Los Angeles school found that 136 second year elementary school pupils who learned to play the piano and read music improved their numeracy skills. This could be so since learning music emphasizes thinking in space and time, and when pupils learn rhythm, they are learning ratios, fractions and proportions. Other researchers investigated the ways in which first and third grade teachers could integrate music into their regular math classrooms. They concluded that music-math integrated lessons had positive effects on three mathematical ability areas of modeling, problem solving and application.'
+};
+
 var clozeTest = new Ractive({
 	el: '#clozeTest',
 	template: '#template-clozeTest',
@@ -13,6 +17,10 @@ var clozeTest = new Ractive({
 		}
 	}
 
+});
+
+clozeTest.on('251', function() {
+	clozeTest.set('input', examples.'251');
 });
 
 //Randomise plugin
