@@ -58,6 +58,8 @@ $(function() {
 		}
 		number += 1;
 	}
+	
+	var numbers = [];
 
 	$('body').on('click', '#result_content span', function(){
 		var
@@ -65,7 +67,7 @@ $(function() {
 			inputWidth = $(this).width()
 		;
 		if ($(this).children().length == 0) {
-			console.log("index: " + $('#result_content').children().index($(this)))
+			numbers.push($('#result_content').children().index($(this)));
 			incrementNumber();
 
 			$(this).attr({id: 'item' + number})
@@ -95,6 +97,10 @@ $(function() {
 
 	$('#keywords button').click(function() {
 		$('#keyword_content').randomize("#keyword_content span");
+	});
+
+	$('#log button').click(function() {
+		console.log(numbers.sort());
 	});
 
 	$('body').on('keyup', '#result_content input[type=text]', inputCheck);
