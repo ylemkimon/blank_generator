@@ -96,10 +96,7 @@ $(function() {
 	});
 
 	$('#keywords button').click(function() {
-		$('#keyword_content').randomize("#keyword_content span");
-	});
-
-	$('#log button').click(function() {
+		//$('#keyword_content').randomize("#keyword_content span");
 		console.log(numbers.sort());
 	});
 
