@@ -20,7 +20,7 @@ var clozeTest = new Ractive({
 });
 
 clozeTest.on('251', function() {
-	clozeTest.set('input', examples.'251');
+	clozeTest.set('input', examples['251']);
 });
 
 //Randomise plugin
