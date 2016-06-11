@@ -2,6 +2,10 @@ var examples = {
 	251: 'What type of play is the most appealing to preschoolers, those ranging from three to six years of age? Role-playing games in which the child acts out a situation or imitates a person. According to psychologist Daniil Elkonin, in this type of game, the major influence is the realm of human activity, especially work and relationships among people. Therefore, the child is precisely trying to reconstruct these aspects of reality. This reality that surrounds the child may be divided into two spheres: that of objects and that of human activity. At the beginning of their lives, children concentrate their activities on objects and on the actions that adults carry out with these objects. However, as the role-playing game begins to evolve, the focus is shifted to the relationships that adults establish among themselves. Children then use the actions performed with objects as guidelines. In other words, children become more interested in the relationships that exist among human beings and begin to reproduce them when they play.'
 };
 
+var blanks = {
+	251: [7, 9, 11, 12, 14, 19, 20, 26, 27]
+}
+
 var clozeTest = new Ractive({
 	el: '#clozeTest',
 	template: '#template-clozeTest',
@@ -21,6 +25,9 @@ var clozeTest = new Ractive({
 
 clozeTest.on('251', function() {
 	clozeTest.set('input', examples['251']);
+	for (i = 0; i < blanks['251'].length; i++) {
+		$('#result_content').children()[blanks['251'][i]].click();
+	}
 });
 
 //Randomise plugin
