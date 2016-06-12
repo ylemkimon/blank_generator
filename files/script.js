@@ -38,7 +38,7 @@ var clozeTest = new Ractive({
 
 });
 
-for (j = 1; j =< 16; j++) {
+for (j = 1; j <= 16; j++) {
 	var num = '' + j;
 	clozeTest.on(num, function() {
 		clozeTest.set('input', examples[num]);
