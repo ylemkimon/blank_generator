@@ -56,6 +56,7 @@ var clozeTest = new Ractive({
 for (j = 1; j <= 16; j++) {
 	var num = '' + j;
 	clozeTest.on(num, function() {
+		console.log($(this));
 		clozeTest.set('input', examples[num]);
 		for (i = 0; i < blanks[num].length; i++) {
 			$('#result_content').children()[blanks[num][i]].click();
