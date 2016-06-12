@@ -38,12 +38,15 @@ var clozeTest = new Ractive({
 
 });
 
-clozeTest.on('251', function() {
-	clozeTest.set('input', examples['12']);
-	for (i = 0; i < blanks['251'].length; i++) {
-		$('#result_content').children()[blanks['251'][i]].click();
-	}
-});
+for (j = 1; j =< 16; j++) {
+	var num = '' + j;
+	clozeTest.on(num, function() {
+		clozeTest.set('input', examples[num]);
+		for (i = 0; i < blanks[num].length; i++) {
+			$('#result_content').children()[blanks[num][i]].click();
+		}
+	});
+}
 
 //Randomise plugin
 (function($) {
