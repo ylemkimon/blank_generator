@@ -53,7 +53,7 @@ var clozeTest = new Ractive({
 
 });
 
-clozeTest.on('1', function() { clozeTest.set('input', examples['1']); for (i = 0; i < blanks['1'].length; i++) { $('#result_content').children()[blanks['1'][i]].click(); } });
+clozeTest.on('01', function() { clozeTest.set('input', examples['1']); for (i = 0; i < blanks['1'].length; i++) { $('#result_content').children()[blanks['1'][i]].click(); } });
 clozeTest.on('2', function() { clozeTest.set('input', examples['2']); for (i = 0; i < blanks['2'].length; i++) { $('#result_content').children()[blanks['2'][i]].click(); } });
 clozeTest.on('3', function() { clozeTest.set('input', examples['3']); for (i = 0; i < blanks['3'].length; i++) { $('#result_content').children()[blanks['3'][i]].click(); } });
 clozeTest.on('4', function() { clozeTest.set('input', examples['4']); for (i = 0; i < blanks['4'].length; i++) { $('#result_content').children()[blanks['4'][i]].click(); } });
