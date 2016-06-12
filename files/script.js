@@ -53,16 +53,22 @@ var clozeTest = new Ractive({
 
 });
 
-for (j = 1; j <= 16; j++) {
-	var num = '' + j;
-	clozeTest.on(num, function() {
-		console.log($(this));
-		clozeTest.set('input', examples[num]);
-		for (i = 0; i < blanks[num].length; i++) {
-			$('#result_content').children()[blanks[num][i]].click();
-		}
-	});
-}
+clozeTest.on('1', function() { clozeTest.set('input', examples['1']); for (i = 0; i < blanks['1'].length; i++) { $('#result_content').children()[blanks['1'][i]].click(); } });
+clozeTest.on('2', function() { clozeTest.set('input', examples['2']); for (i = 0; i < blanks['2'].length; i++) { $('#result_content').children()[blanks['2'][i]].click(); } });
+clozeTest.on('3', function() { clozeTest.set('input', examples['3']); for (i = 0; i < blanks['3'].length; i++) { $('#result_content').children()[blanks['3'][i]].click(); } });
+clozeTest.on('4', function() { clozeTest.set('input', examples['4']); for (i = 0; i < blanks['4'].length; i++) { $('#result_content').children()[blanks['4'][i]].click(); } });
+clozeTest.on('5', function() { clozeTest.set('input', examples['5']); for (i = 0; i < blanks['5'].length; i++) { $('#result_content').children()[blanks['5'][i]].click(); } });
+clozeTest.on('6', function() { clozeTest.set('input', examples['6']); for (i = 0; i < blanks['6'].length; i++) { $('#result_content').children()[blanks['6'][i]].click(); } });
+clozeTest.on('7', function() { clozeTest.set('input', examples['7']); for (i = 0; i < blanks['7'].length; i++) { $('#result_content').children()[blanks['7'][i]].click(); } });
+clozeTest.on('8', function() { clozeTest.set('input', examples['8']); for (i = 0; i < blanks['8'].length; i++) { $('#result_content').children()[blanks['8'][i]].click(); } });
+clozeTest.on('9', function() { clozeTest.set('input', examples['9']); for (i = 0; i < blanks['9'].length; i++) { $('#result_content').children()[blanks['9'][i]].click(); } });
+clozeTest.on('10', function() { clozeTest.set('input', examples['10']); for (i = 0; i < blanks['10'].length; i++) { $('#result_content').children()[blanks['10'][i]].click(); } });
+clozeTest.on('11', function() { clozeTest.set('input', examples['11']); for (i = 0; i < blanks['11'].length; i++) { $('#result_content').children()[blanks['11'][i]].click(); } });
+clozeTest.on('12', function() { clozeTest.set('input', examples['12']); for (i = 0; i < blanks['12'].length; i++) { $('#result_content').children()[blanks['12'][i]].click(); } });
+clozeTest.on('13', function() { clozeTest.set('input', examples['13']); for (i = 0; i < blanks['13'].length; i++) { $('#result_content').children()[blanks['13'][i]].click(); } });
+clozeTest.on('14', function() { clozeTest.set('input', examples['14']); for (i = 0; i < blanks['14'].length; i++) { $('#result_content').children()[blanks['14'][i]].click(); } });
+clozeTest.on('15', function() { clozeTest.set('input', examples['15']); for (i = 0; i < blanks['15'].length; i++) { $('#result_content').children()[blanks['15'][i]].click(); } });
+clozeTest.on('16', function() { clozeTest.set('input', examples['16']); for (i = 0; i < blanks['16'].length; i++) { $('#result_content').children()[blanks['16'][i]].click(); } });
 
 //Randomise plugin
 (function($) {
