@@ -120,7 +120,7 @@ $(function() {
 			$(this).html('(' + number + ') <input type="text"/>')
 				.find('input')
 				.addClass('test-input')
-				.attr({name: thisTxt})
+				.attr({name: thisTxt, placeholder: thisTxt.substring(0,1)})
 				.css('width', inputWidth)
 				.data('text', thisTxt)
 			;
