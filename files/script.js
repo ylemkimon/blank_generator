@@ -149,6 +149,8 @@ $(function() {
 			$(this).parent().addClass('success').text(this.name);
 			var inputs = $('#result_content').find(':input');
 			inputs.eq(inputs.index(this)+1).focus();
+			console.log('#k' + $(this).attr('id'));
+			console.log($('#k' + $(this).attr('id')));
 			$('#k' + $(this).attr('id')).fadeOut('slow').remove();
 			$(this).remove();
 		} else {
