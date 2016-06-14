@@ -145,7 +145,7 @@ $(function() {
 
 	function inputCheck() {
 		if ( this.value === this.name ) {
-			console.log($(this));
+			console.log($(this).parent());
 			$(this).addClass('success');
 			$(this).parent().addClass('success').text(this.name);
 			var inputs = $('#result_content').find(':input');
