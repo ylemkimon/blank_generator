@@ -110,7 +110,7 @@ $(function() {
 			numbers.push($('#result_content').children().index($(this)));
 			incrementNumber();
 
-			$(this).attr({id: 'item' + number})
+			$(this).attr({id: 'kitem' + number})
 				.addClass('selected')
 				.clone()
 				.text($(this).text() + ' ')
@@ -129,7 +129,7 @@ $(function() {
 	
 	$('body').on('click','#keyword_content span', function() {
 		var thisClass = $(this).attr('id');
-		var thatClass = 'span#' + thisClass;
+		var thatClass = 'span#' + thisClass.substring(1);
 		var thisTxt = $(this).text().trim();
 		$('#result_content').find(thatClass).replaceWith('<span>' + thisTxt + '</span>');
 		$(this).fadeOut('slow').remove();
@@ -147,7 +147,8 @@ $(function() {
 			$(this).addClass('success');
 			$(this).parent().addClass('success').text(this.name);
 			var inputs = $('#result_content').find(':input');
-			inputs.eq(inputs.index(this)+ 1).focus();
+			inputs.eq(inputs.index(this)+1).focus();
+			$('#k' + $(this).attr('id')).fadeOut('slow').remove();
 			$(this).remove();
 		} else {
 			$(this).addClass('error');
