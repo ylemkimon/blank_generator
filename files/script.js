@@ -110,9 +110,10 @@ $(function() {
 			numbers.push($('#result_content').children().index($(this)));
 			incrementNumber();
 
-			$(this).attr({id: 'kitem' + number})
+			$(this).attr({id: 'item' + number})
 				.addClass('selected')
 				.clone()
+				.attr({id: 'kitem' + number})
 				.text($(this).text() + ' ')
 				.appendTo('#keyword_content')
 			;
